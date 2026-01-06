@@ -1,0 +1,77 @@
+// //  String
+
+// // 1 -- Immutable  ::
+
+// let name = "Swap"
+// name.toLowerCase()
+// console.log(name, "....name");
+
+// // 2 -- length and indexing  ::
+
+// const length = name.length
+// console.log(length, "..length");
+
+// console.log(name[3], "...index value");
+// // ------------------------
+
+// // 3 -- Upper / lower
+// console.log(name.toLowerCase());
+// console.log(name.toUpperCase());
+// // -------------------------------
+// //  4 -- Trim Family ::
+
+// let strTrim = "   Swap     "
+// // strTrim = strTrim.trim()
+// console.log(strTrim.trim(), "...trim all");
+// console.log(strTrim.trimStart(), "Trim start");
+// console.log(strTrim.trimEnd(), "Trim End");
+
+// // -------------------------------
+
+// // 5 -- Includes        // case Sentitive
+
+// let love = "I love You"
+
+// console.log(love.includes("swap"), "...is includes");
+// console.log(love.includes("I"), "...is includes");
+// console.log(love.includes("love"), "...is includes");
+// console.log(love.includes("YOU"), "...is includes");
+
+// // ---------------------------------------
+
+// // 6 -- startsWith() and endsWith()
+
+// let email = "swap@gmail.com"
+
+// console.log(email.startsWith(".com"), "...startsWith");
+// console.log(email.endsWith(".com"), "...endsWith");
+
+// // ----------------------------------
+
+// 7. slice() ::    power negative indexing
+
+let mystr = "swapnil"
+
+console.log(mystr.slice(0, 4), "...first 4");
+
+console.log(mystr.slice(4), "...4 ind se last all ");
+
+console.log(mystr.slice(-3), "... neg 3 se all last");
+
+console.log(mystr.slice(-7, -3), "...swap");
+
+console.log(mystr.slice(-3, -7), "...swap");    // ""
+
+console.log(mystr.slice(4, 0), "...4, 0");      // ""
+
+console.log(mystr.slice(-100), "... -100");     // "swapnil"
+
+// --------------------------------------------------------
+
+
+
+
+
+
+
+
