@@ -50,28 +50,59 @@
 
 // 7. slice() ::    power negative indexing
 
-let mystr = "swapnil"
+// let mystr = "swapnil"
 
-console.log(mystr.slice(0, 4), "...first 4");
+// console.log(mystr.slice(0, 4), "...first 4");
 
-console.log(mystr.slice(4), "...4 ind se last all ");
+// console.log(mystr.slice(4), "...4 ind se last all ");
 
-console.log(mystr.slice(-3), "... neg 3 se all last");
+// console.log(mystr.slice(-3), "... neg 3 se all last");
 
-console.log(mystr.slice(-7, -3), "...swap");
+// console.log(mystr.slice(-7, -3), "...swap");
 
-console.log(mystr.slice(-3, -7), "...swap");    // ""
+// console.log(mystr.slice(-3, -7), "...swap");    // ""
 
-console.log(mystr.slice(4, 0), "...4, 0");      // ""
+// console.log(mystr.slice(4, 0), "...4, 0");      // ""
 
-console.log(mystr.slice(-100), "... -100");     // "swapnil"
+// console.log(mystr.slice(-100), "... -100");     // "swapnil"
 
 // --------------------------------------------------------
 
+//  Random Number Generator :
+
+// 0-10
+const randNum = Math.random() * 10
+const num = Math.floor(randNum)
+// console.log(num, "...random number");
 
 
+// 10-20
 
+const randomNos = Math.floor(Math.random() * (20 - 10 + 1)) + 10
 
+// console.log(randomNos, "...10-20");
+
+//  Dice ::
+
+const diceNum = Math.floor(Math.random() * 6) + 1
+// console.log(diceNum, "....diceNum");
+
+const rangeGenerator = (min, max) => {
+    const res = Math.floor(Math.random() * (max - min + 1)) + min
+    console.log(`Random Number between ${min} and ${max} is  : ${res}`);
+
+}
+
+// rangeGenerator(10, 20)
+// rangeGenerator(100000, 999999)
+
+// Random fruits :
+
+const fruits = ["apple", "banana", "mango", "orange"];
+
+const randomFruits = fruits[Math.floor(Math.random() * fruits.length)]
+
+console.log(randomFruits, "...random fruits");
 
 
 
