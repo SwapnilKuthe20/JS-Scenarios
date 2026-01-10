@@ -89,7 +89,7 @@ const diceNum = Math.floor(Math.random() * 6) + 1
 
 const rangeGenerator = (min, max) => {
     const res = Math.floor(Math.random() * (max - min + 1)) + min
-    console.log(`Random Number between ${min} and ${max} is  : ${res}`);
+    // console.log(`Random Number between ${min} and ${max} is  : ${res}`);
 
 }
 
@@ -102,7 +102,153 @@ const fruits = ["apple", "banana", "mango", "orange"];
 
 const randomFruits = fruits[Math.floor(Math.random() * fruits.length)]
 
-console.log(randomFruits, "...random fruits");
+// console.log(randomFruits, "...random fruits");
+// -----------------------------------------------
+//  Obeject merge :::
+
+const obj1 = {
+    name: "swap"
+}
+
+const obj2 = {
+    age: 25
+}
+
+const obj3 = { ...obj1, ...obj2 }
+// console.log(obj3, "...obj3");
+
+
+const user = {
+    name: "dipak",
+    city: "Eklari"
+}
+
+const setting = {
+    theme: "light",
+    lang: "Eng"
+}
+
+// const userDetails = Object.assign({}, user, setting)
+
+const userDeatils1 = Object.assign(user, setting)
+
+// console.log({ userDetails }, "...userDeatils");
+
+// console.log(userDeatils1, "...userDeatils");
+// console.log(user, "..user Obj");
+// -------------------------------------------------------
+
+const student = {
+    name: "Swap",
+    age: 28,
+    address: {
+        city: "eklari",
+        pin: 441905
+    }
+}
+
+const device = {
+    mobile: "lava",
+    sim: {
+        operator: "airtel",
+        comsumer: "indian"
+    }
+}
+
+const studentInfo = { ...student, ...device }
+// console.log(studentInfo, "...studentInfo");
+
+student.address.city = "nagpur"
+
+studentInfo.address.city = "raipur"
+// console.log(studentInfo, "...studentInfo");     // address : ref same 
+// console.log(student, "...student");             // ref same
+
+
+studentInfo.name = "neel"
+
+// console.log(studentInfo.name);          // neel : top level keys copy
+// console.log(student.name);              // swap
+
+// -------------------------------
+
+
+const a = {
+    info: {
+        name: "ayush"
+    }
+}
+
+const b = {
+    info: {
+        age: 25
+    }
+}
+
+const c = { ...a, ...b }
+// console.log(c, "....c shallow copy eg ");
+
+// ---------------------------------
+
+// Deep merge : correct way by spread
+
+const employee = {
+    name: "ayush",
+    age: 15,
+    grade: "group D",
+    payment: {
+        basic: 25000,
+        stipend: 2000
+    },
+
+}
+
+const manager = {
+    name: "giri",
+    age: 35,
+    post: "class1",
+    payment: {
+        basic: 35000,
+        stipend: 10000
+    }
+}
+
+const details = {
+    ...employee,
+    payment: {
+        ...employee.payment,
+    },
+    ...manager,
+    payment: {
+        ...manager.payment
+    }
+}
+
+console.log(details, "...details");
+
+// details.name = "swap";
+// details.payment.basic = 40000;
+
+// console.log(details, "...details");
+// console.log(manager, "...manager");
+// console.log(employee, "...employee");
+// ---------------------------------------
+
+console.log(typeof {});
+console.log(typeof []);
+console.log(typeof null);
+console.log(typeof undefined);
+console.log(typeof function () { });
+
+let abc = 12
+// console.log(typeof abc)
+
+
+
+
+
+
+
 
 
 
