@@ -22,13 +22,13 @@ const mergeDependOnType = (inp1, inp2) => {
     console.log(Array.isArray(inp1));
     console.log(Array.isArray(inp2));
 
-    if (Array.isArray(inp1) && Array.isArray(inp2)) {
+    if (Array.isArray(inp1) && Array.isArray(inp2) && typeof inp1 !== null && typeof inp2 !== null) {
         console.log("Inside array if");
 
         const resultantArray = [...inp1, ...inp2]
         return resultantArray;
 
-    } else if (!Array.isArray(inp1) && !Array.isArray(inp2) && typeof inp1 === "object" && typeof inp2 === "object") {
+    } else if (!Array.isArray(inp1) && !Array.isArray(inp2) && typeof inp1 === "object" && typeof inp2 === "object" && typeof inp1 !== null && typeof inp2 !== null) {
         console.log("Inside object if");
 
         const resultantObject = { ...inp1, ...inp2 }
