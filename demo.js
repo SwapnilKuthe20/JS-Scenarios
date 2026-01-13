@@ -249,8 +249,13 @@ let abc = 12
 
 const s = new Set()
 
-console.log(s);
-console.log(typeof s);
+// console.log(s);
+// console.log(typeof s);
+// -----------------------------------
 
 
+const arr1 = [1, 2, 5, 3, 4, 8, 3, 0]
+console.log(arr1.sort());
 
+const arr2 = ["swap", "akki", "giti", "raju"]
+console.log(arr2.sort());
