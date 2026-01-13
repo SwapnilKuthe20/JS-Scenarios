@@ -224,7 +224,7 @@ const details = {
     }
 }
 
-console.log(details, "...details");
+// console.log(details, "...details");
 
 // details.name = "swap";
 // details.payment.basic = 40000;
@@ -234,21 +234,23 @@ console.log(details, "...details");
 // console.log(employee, "...employee");
 // ---------------------------------------
 
-console.log(typeof {});
-console.log(typeof []);
-console.log(typeof null);
-console.log(typeof undefined);
-console.log(typeof function () { });
+// console.log(typeof {});
+// console.log(typeof []);
+// console.log(typeof null);
+// console.log(typeof undefined);
+// console.log(typeof function () { });
 
 let abc = 12
 // console.log(typeof abc)
 
+// ------------------------------------
 
+// Set() :::
 
+const s = new Set()
 
-
-
-
+console.log(s);
+console.log(typeof s);
 
 
 
