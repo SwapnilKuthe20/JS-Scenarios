@@ -16,8 +16,7 @@
 const findDayOfWeek = (date) => {
 
     // console.log(date, "...date ");
-    const dayOfWeek = ["Sunday", "Monday", "Teusday", "Wednesday", "Thursday", "Friday"]
-
+    const dayOfWeek = ["Sunday", "Monday", "Teusday", "Wednesday", "Thursday", "Friday", 'Saturday']
 
     const dateObj = new Date(date)
 
