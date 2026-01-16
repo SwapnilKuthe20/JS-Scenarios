@@ -255,7 +255,28 @@ const s = new Set()
 
 
 const arr1 = [1, 2, 5, 3, 4, 8, 3, 0]
-console.log(arr1.sort());
+// console.log(arr1.sort());
 
 const arr2 = ["swap", "akki", "giti", "raju"]
-console.log(arr2.sort());
+// console.log(arr2.sort());
+// ---------------------------------------------------
+
+// reduce() ::   
+
+const givenArr = [1, 2, 5, 3, 4, 8, 3, 0]
+
+const reduceResult = givenArr.reduce((acc, curr, ind, arr) => {
+    // console.log(acc, curr, ind, arr);
+
+    return acc + curr
+
+}, 0)
+
+// console.log(reduceResult);
+
+// --------------------------------
+
+
+
+
+
