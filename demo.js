@@ -276,6 +276,63 @@ const reduceResult = givenArr.reduce((acc, curr, ind, arr) => {
 
 // --------------------------------
 
+//  Objects JS :::
+
+
+const objA = {
+    x: 10
+}
+
+const objB = objA
+
+objB.x = 20
+
+// console.log(objA.x, "... a ");      //  store and passed by reference
+
+const stud = {
+    name: "swap",
+    age: 22,
+    city: "Nagpur"
+}
+
+stud.name = "Neel"
+
+stud.caste = "Kunbi"
+
+delete stud.caste;
+
+// console.log(stud, "...stud obj");
+
+// -----------------------------
+
+const person = {
+    name: "swap",
+    age: 22,
+    address: {
+        city: "Nagpur",
+        pin: 441905
+    },
+    greet: function () {
+        console.log("hello mr. ", this.name);
+    }
+}
+
+// console.log(person.address?.city, "...city");
+// person.greet()
+
+// console.log(person.address.dist, "...dist");
+
+
+// console.log(Object.keys(person));
+// console.log(Object.values(person));
+// console.log(Object.entries(person), "...entries");
+
+const objKeysValus = Object.entries(person)
+
+// console.log(objKeysValus, "..key value pair in array");
+
+const flatNestedArr = objKeysValus.flat()
+console.log(flatNestedArr, "...flat");
 
 
 
