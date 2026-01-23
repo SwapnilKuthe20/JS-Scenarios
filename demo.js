@@ -332,8 +332,108 @@ const objKeysValus = Object.entries(person)
 // console.log(objKeysValus, "..key value pair in array");
 
 const flatNestedArr = objKeysValus.flat()
-console.log(flatNestedArr, "...flat");
+// console.log(flatNestedArr, "...flat");
 
+
+// :: in keyword  :: in Obj
+// in prototype chain bhi check karta hai
+
+const emp = {
+    name: "deep",
+    age: 22,
+    city: "Bhandara",
+    pin: undefined
+}
+
+// console.log("name" in emp, "...is name in emp obj");
+// console.log(emp.name, "...name ");
+
+//  Bug  :: thats why in comes in action ::
+// console.log(emp.address, "...addresss");            // undefined
+// console.log(emp.pin, "...pin ");                    // undefined
+
+// in -- Prototype se bhi properties leti h :: creates bug... 
+// Thats why -- hasOwnProperty comes in action 
+
+// console.log("toString" in emp), "...emp has toString ??? ";     // true  --- bug
+// console.log("hasOwnProperty" in emp, "...hasOwnProp ????");     // true 
+// console.log("entries" in emp, "...entries ????");
+
+
+// console.log("length" in emp, "...length ???");                  // false 
+// console.log("toUpperCase" in emp, "...emp has toUppercase ??");     // false 
+
+
+// console.log(Object.getPrototypeOf(emp), "...get prototyp");
+
+// console.log(emp.__proto__, "...proto emp");
+// console.log(Object.prototype.toString.enumerable === false, "... is enumerable ??");
+
+// console.log(Object.getOwnPropertyDescriptors(Object.prototype));
+
+
+// :: Object.defineProperty() ::
+
+const empl = {
+    id: 13,
+    name: 'ayush',
+    age: 22,
+    city: "eklari"
+}
+
+Object.defineProperty(empl, "id", {
+    writable: false,
+    configurable: false
+})
+
+empl.id = 100;
+// console.log(empl, "...after update id... still not update");
+
+
+delete empl.id
+// console.log(delete empl.id, "delete id configurable false");
+// console.log(empl, "..after delete id.. still does not delete");
+
+// add pin property in empl ::
+
+Object.defineProperty(empl, "pin", {
+    value: 441905,
+    writable: true,
+    enumerable: true,
+    configurable: true
+});
+
+
+
+// console.log(empl, "...empl obj");
+// console.log(empl.pin, "...empl pin");
+// console.log(Object.keys(empl), "..keys of empl");
+
+delete empl.pin
+// console.log(empl, "...empl obj");
+// console.log(empl.pin, "...after delete pin");
+
+// -----------------------------------
+// ========================================
+
+// :: JSON  ::  data exchange between browser and server
+
+const obj = {
+    id: 12,
+    name: "ayush",
+    age: "18"
+}
+
+const objToStr = JSON.stringify(obj)
+
+// console.log(objToStr, "...obj to str");
+// console.log(typeof objToStr, "...string");
+
+const strToObj = JSON.parse(objToStr)
+// console.log(strToObj);
+// console.log(typeof strToObj);
+
+// ============================================
 
 
 
