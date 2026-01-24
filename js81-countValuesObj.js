@@ -39,3 +39,5 @@ const boolObj = { a: true, b: false, c: true, d: true };
 
 
 countValuesObj(objNum)
+countValuesObj(fruits)
+countValuesObj(boolObj)
