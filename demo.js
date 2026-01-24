@@ -435,5 +435,18 @@ const strToObj = JSON.parse(objToStr)
 
 // ============================================
 
+// :: every() :: in Array   :: shirt circut  :: condition fail loop stop
+
+
+const arr = [14, 15, 19, -5, -48, 12];
+
+(() => {
+
+    arr.every((num) => {
+        // console.log(num, "..num");
+        return num > 0
+    })
+})()
+
 
 
