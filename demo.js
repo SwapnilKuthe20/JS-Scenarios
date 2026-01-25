@@ -447,6 +447,20 @@ const arr = [14, 15, 19, -5, -48, 12];
         return num > 0
     })
 })()
+// ----------------------------------
+
+let arrIds = [11, 12, 13, 14, 15]
+
+const objId = {}
+
+for (let item of arrIds) {
+
+    objId["userId" + item] = Math.min(Math.random() * 10)
+
+    console.log(objId[item], "...obj item");
+}
+
+console.log(objId);
 
 
 
