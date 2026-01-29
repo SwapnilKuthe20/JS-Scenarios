@@ -24,7 +24,7 @@ const objToQueryStr = (obj) => {
     const keysAll = Object.keys(obj)
 
     const resultMap = keysAll.map((ele) => {
-        `${encodeURIComponent(ele)} = ${encodeURIComponent(obj[key])}`
+        return `${encodeURIComponent(ele)} = ${encodeURIComponent(obj[ele])}`
     })
 
     console.log(resultMap, "...result map");
@@ -32,7 +32,7 @@ const objToQueryStr = (obj) => {
     let queryStr = resultMap.join("&")
 
     console.log(queryStr, "...queryString");
-    
+
 }
 
 const obj = { name: "Alice", age: 25 }
