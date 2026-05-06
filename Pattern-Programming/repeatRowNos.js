@@ -6,20 +6,45 @@
 // 333
 // 4444
 
-const repeateRowNos = (n) => {
+// ----- First Method -----
 
-    let str = "";
+let n = 4;
+
+const repeateRowNos = (n) => {
 
     for (let i = 1; i <= n; i++) {
 
-        for (let j = 1; j <= i; j++) {
-            str += i + " "
-        }
-        str += '\n';
-    }
-    console.log(str);
+        let row = "";
 
+        for (let j = 1; j <= i; j++) {
+
+            row += i + " ";
+        }
+        console.log(row);
+
+    }
 }
 
-let n = 4;
 repeateRowNos(n)
+
+
+
+// ----- Second Method -----
+
+// const repeateRowNos = (n) => {
+
+//     let str = "";
+
+//     for (let i = 1; i <= n; i++) {
+
+//         for (let j = 1; j <= i; j++) {
+//             str += i + " "
+//         }
+//         str += '\n';
+//     }
+//     console.log(str);
+
+// }
+
+// let n = 4;
+// repeateRowNos(n)
