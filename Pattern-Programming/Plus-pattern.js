@@ -16,7 +16,7 @@ for (let i = 1; i <= n; i++) {
     for (let j = 1; j <= n; j++) {
         // console.log(j, "...j");
 
-        if (i == (n + 1) / 2 || (j == center)) {
+        if (i == center || (j == center)) {
             str += "*";
         } else {
             str += " ";
